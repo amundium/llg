@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.screen {
+    width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.game-mode-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#start-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timer-bar {
+    background-color: #008080;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timer-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: #FFD700;
+    transition: width 1s linear;
+}
+
+.timer, .score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.prompt-container {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.upcoming-prompt {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.main-prompt {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.response-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px dashed #008080;
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.instruction {
+    text-align: right;
+    color: #888;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.choices-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.choice-button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #008080;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.choice-button:hover {
+    background-color: #e0f0f0;
+}
+
+.choice-button.correct {
+    background-color: #90EE90;
+}
+
+.choice-button.incorrect {
+    background-color: #FFB6C1;
+    border: 2px solid #FF0000;
+}

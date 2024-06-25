@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Training Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="splash-screen" class="screen">
+        <h1>Welcome! Please choose your game mode.</h1>
+        <div class="game-mode-selection">
+            <label>
+                <input type="radio" name="gameMode" value="translate" checked>
+                Translate the word
+            </label>
+            <label>
+                <input type="radio" name="gameMode" value="image">
+                Guess the image
+            </label>
+        </div>
+        <button id="start-button">START</button>
+    </div>
+
+    <div id="game-screen" class="screen" style="display: none;">
+        <div class="timer-bar">
+            <div class="timer">TID <span id="timer">01:56</span></div>
+            <div class="score">POENG <span id="score">0</span></div>
+            <div class="timer-progress" id="timer-progress"></div>
+        </div>
+        <div class="prompt-container">
+            <div class="upcoming-prompt" id="upcoming-prompt"></div>
+            <div class="main-prompt" id="prompt"></div>
+            <img id="image-prompt" style="display: none; max-width: 100%; height: auto;">
+            <input type="text" id="response" class="response-input" autofocus>
+            <div id="choices" class="choices-container" style="display: none;"></div>
+            <div class="instruction">Trykk Enter ↵ for neste</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
